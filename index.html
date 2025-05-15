@@ -1,0 +1,115 @@
+<button id="myButton">Click me!</button>
+<br>
+
+<script>
+document.getElementById("myButton").addEventListener("click", function() {
+  alert("Button clicked!");
+});
+</script>
+
+
+<button id="hoverButton">Hover over me!</button>
+
+<style>
+#hoverButton:hover {
+  background-color: #ccc;
+}
+</style>
+
+<input id="keypressInput" type="text">
+
+<script>
+document.getElementById("keypressInput").addEventListener("keypress", function(event) {
+  console.log(Key pressed: ${event.key});
+});
+</script>
+<br>
+
+<button id="secretButton">Double-click me!</button>
+
+<script>
+let clickCount = 0;
+document.getElementById("secretButton").addEventListener("click", function() {
+  clickCount++;
+  if (clickCount === 2) {
+    alert("Secret action triggered!");
+    clickCount = 0;
+  }
+});
+</script>
+<br>
+
+<button id="toggleButton">Toggle me!</button>
+
+<script>
+document.getElementById("toggleButton").addEventListener("click", function() {
+  if (this.textContent === "Toggle me!") {
+    this.textContent = "Toggled!";
+    this.style.backgroundColor = "green";
+  } else {
+    this.textContent = "Toggle me!";
+    this.style.backgroundColor = "";
+  }
+});
+</script>
+
+<div id="image">
+    <img src="image/pexels-steve-1981468.jpg" alt="Image" style="width:260px; height:auto;">
+    <img src="image/pexels-tdcat-971546.jpg" alt="Image" style="width: 260px;%; height:auto;">
+</div>
+
+
+
+<input id="keypressInput" type="text">
+
+<script>
+document.getElementById("keypressInput").addEventListener("keypress", function(event) {
+  console.log(Key pressed: ${event.key});
+});
+</script>
+
+
+<button id="secretButton">Double-click me!</button>
+
+<script>
+let clickCount = 0;
+document.getElementById("secretButton").addEventListener("click", function() {
+  clickCount++;
+  if (clickCount === 2) {
+    alert("Secret action triggered!");
+    clickCount = 0;
+  }
+});
+</script>
+
+
+<form id="myForm">
+  <input id="requiredField" type="text" required>
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function(event) {
+  if (!document.getElementById("requiredField").value) {
+    event.preventDefault();
+    alert("Please fill in the required field.");
+  }
+});
+</script>
+
+<input id="emailField" type="email">
+
+<script>
+document.getElementById("emailField").addEventListener("input", function() {
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if (!emailRegex.test(this.value)) {
+    this.style.border = "1px solid red";
+  } else {
+    this.style.border = "";
+  }
+});
+</script>
+
+
+
+
